@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change HTML attribute</title>
+</head>
+    
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p>JavaScript can change HTML attribute values.</p>
+
+<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<button onclick="aus()">أطفئ الإضاءة</button>
+ 
+<img id="myImage" src="Lampe.png" style="width:100px"> <!--Bild steht in der Mitte der Buttons-->
+
+<button onclick="an()">أشعل الإضاءة</button>
+
+<script>
+
+    function aus(){
+        const bildAus = document.getElementById('myImage');
+        console.log(bildAus);
+        bildAus.src='Lampe.png';
+//bildAus.style.height= '125px';
+
+        const h2 = document.querySelector('h2');
+        h2.style.color = 'black';
+        h2.style.background = 'green';
+    };
+    function an(){
+        const bildAn = document.getElementById('myImage');
+        console.log(bildAn);
+        bildAn.src='LampeAn.png'; //Atribut src geändert
+        const h2 = document.querySelector('h2'); //auwählen
+        h2.style.color = 'red';
+        h2.style.background = 'orange';
+    }
+</script>
+</body>
+</html>
